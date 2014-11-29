@@ -14,12 +14,9 @@ public interface ParaSetting {
 	Para<Boolean> xiazshud6 = new Para<Boolean>("key6", true);
 	Para<Integer> xiazshud7 = new Para<Integer>("key7", 3);
 	Para<String> xiazshud8 = new Para<String>("key8", "收藏");
-	Para<String> xiazshud9 = new Para<String>("key9", "搜索附近的人");
-//	Para<String> xiazshud9 = new Para<String>("key9", "搜索附近的人");
+	Para<String> xiazshud9 = new Para<String>("key9", "");
 
 	public class ParaUtil {
-
-
 		public static void initPrar(Context context) {
 			SettingsUtil settingsUtil = new SettingsUtil(context);
 
