@@ -13,18 +13,18 @@ public class RoundCornerFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		DisplayOptions selectorPara = new DisplayOptions.Builder()//
-		.setGroupTitleSizePx(15)//
-		.setOut_circle_Size(15)//
-		.setRowStyle(RowStyle.ALL_AROUND).setRowleftpadding(21)//
-		.build();
-		
+				.setGroupTitleSizePx(15)//
+				.setOut_circle_Size(15)//
+				.setRowStyle(RowStyle.ALL_AROUND).setRowleftpadding(21)//
+				.build();
+
 		ScrollView scrollView = new ScrollView(getActivity());
+		scrollView.setVerticalScrollBarEnabled(false);
 		View view = initView(selectorPara);
 		view.setPadding(20, 10, 20, 10);
 		scrollView.addView(view);
-		
+
 		return scrollView;
 	}
-	
-	 
+
 }
