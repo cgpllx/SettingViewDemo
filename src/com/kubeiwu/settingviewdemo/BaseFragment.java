@@ -21,7 +21,7 @@ public class BaseFragment extends Fragment {
 	public void onCreate(android.os.Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ParaUtil.initPrar(getActivity());
-		
+
 	};
 
 	protected View initView(DisplayOptions selectorPara) {
@@ -32,18 +32,22 @@ public class BaseFragment extends Fragment {
 		GroupView groupView2 = containerView.addGroupViewItem(2, "常用功能");
 		GroupView groupView3 = containerView.addGroupViewItem(3, "其他样式");
 
-		groupView1.addRowViewItem(CheckBoxRowView.class, 2, "个人中心", R.drawable.qq1, R.drawable.setting_view_item_selector, ParaSetting.xiazshud2).setOnRowClickListener(getOnRowClickListener(CheckBoxRowView.class));
-		groupView1.addRowViewItem(DefaultRowView.class, 3, "我的电脑", R.drawable.qq2, R.drawable.arrow_to_right, ParaSetting.xiazshud3).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
+		groupView1.addRowViewItem(CheckBoxRowView.class, 2, "个人中心", R.drawable.qq1, R.drawable.setting_view_item_selector, ParaSetting.xiazshud2)//
+				.setOnRowClickListener(getOnRowClickListener(CheckBoxRowView.class));
+		groupView1.addRowViewItem(DefaultRowView.class, 3, "我的电脑", R.drawable.qq2, R.drawable.arrow_to_right, ParaSetting.xiazshud3)//
+				.setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 
 		groupView2.addRowViewItem(CheckBoxRowView.class, 1, "空间动态", R.drawable.qq3, R.drawable.setting_view_item_selector, ParaSetting.xiazshud4);
-		groupView2.addRowViewItem(DefaultRowView.class, 2, "文件管理", R.drawable.qq4, R.drawable.arrow_to_right, ParaSetting.xiazshud5).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
+		groupView2.addRowViewItem(DefaultRowView.class, 2, "文件管理", R.drawable.qq4, R.drawable.arrow_to_right, ParaSetting.xiazshud5)//
+				.setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 		groupView2.addRowViewItem(CheckBoxRowView.class, 2, "游戏", R.drawable.qq5, R.drawable.setting_view_item_selector, ParaSetting.xiazshud6);
 
 		groupView3.addRowViewItem(ListRowView.class, 1, "同时下载线程数", R.drawable.qq6, R.drawable.arrow_to_right, ParaSetting.xiazshud7)//
 				.setEntries("1个", "2个", "3个", "4个", "5个")//
 				.setEntryValues(1, 2, 3, 4, 5);//
 		groupView3.addRowViewItem(EditTextRowView.class, 2, "收藏", R.drawable.qq7, R.drawable.arrow_to_right, ParaSetting.xiazshud8);
-		groupView3.addRowViewItem(DefaultRowView.class, 3, "附近的人", R.drawable.qq8, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
+		groupView3.addRowViewItem(DefaultRowView.class, 3, "附近的人", R.drawable.qq8, R.drawable.arrow_to_right, ParaSetting.xiazshud9)//
+				.setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 		;
 		groupView3.addRowViewItem(DefaultRowView.class, 4, "扫一扫", R.drawable.qq9, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 		groupView3.addRowViewItem(DefaultRowView.class, 12, "无图片效果", R.drawable.qq11, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
