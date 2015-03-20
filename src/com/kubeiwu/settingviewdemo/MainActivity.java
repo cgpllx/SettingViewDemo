@@ -9,6 +9,7 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ParaSetting.ParaUtil.initPrar(this);
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new NullRoundCornerFragment());
 		ft.commitAllowingStateLoss();
 //		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.qq1));

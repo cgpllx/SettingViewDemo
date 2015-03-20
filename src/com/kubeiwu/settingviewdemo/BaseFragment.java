@@ -5,13 +5,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Toast;
 
-import com.kubeiwu.commontool.view.setting.CheckBoxRowView;
-import com.kubeiwu.commontool.view.setting.DefaultRowView;
-import com.kubeiwu.commontool.view.setting.EditTextRowView;
 import com.kubeiwu.commontool.view.setting.GroupView;
 import com.kubeiwu.commontool.view.setting.KSettingView;
-import com.kubeiwu.commontool.view.setting.ListRowView;
 import com.kubeiwu.commontool.view.setting.RowView;
+import com.kubeiwu.commontool.view.setting.viewimpl.CheckBoxRowView;
+import com.kubeiwu.commontool.view.setting.viewimpl.DefaultRowView;
+import com.kubeiwu.commontool.view.setting.viewimpl.EditTextRowView;
+import com.kubeiwu.commontool.view.setting.viewimpl.ListRowView;
 import com.kubeiwu.commontool.view.util.DisplayOptions;
 import com.kubeiwu.commontool.view.util.OnRowClickListener;
 import com.kubeiwu.commontool.view.util.RowViewActionEnum;
@@ -34,6 +34,7 @@ public class BaseFragment extends Fragment {
 
 		groupView1.addRowViewItem(CheckBoxRowView.class, 2, "个人中心", R.drawable.qq1, R.drawable.setting_view_item_selector, ParaSetting.xiazshud2)//
 				.setOnRowClickListener(getOnRowClickListener(CheckBoxRowView.class));
+
 		groupView1.addRowViewItem(DefaultRowView.class, 3, "我的电脑", R.drawable.qq2, R.drawable.arrow_to_right, ParaSetting.xiazshud3)//
 				.setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 
@@ -48,7 +49,7 @@ public class BaseFragment extends Fragment {
 		groupView3.addRowViewItem(EditTextRowView.class, 2, "收藏", R.drawable.qq7, R.drawable.arrow_to_right, ParaSetting.xiazshud8);
 		groupView3.addRowViewItem(DefaultRowView.class, 3, "附近的人", R.drawable.qq8, R.drawable.arrow_to_right, ParaSetting.xiazshud9)//
 				.setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
-		;
+		 
 		groupView3.addRowViewItem(DefaultRowView.class, 4, "扫一扫", R.drawable.qq9, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 		groupView3.addRowViewItem(DefaultRowView.class, 12, "无图片效果", R.drawable.qq11, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
 		groupView3.addRowViewItem(DefaultRowView.class, 11, "圆角效果", R.drawable.qq10, R.drawable.arrow_to_right, ParaSetting.xiazshud9).setOnRowClickListener(getOnRowClickListener(DefaultRowView.class));
